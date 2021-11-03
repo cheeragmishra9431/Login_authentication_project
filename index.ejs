@@ -1,0 +1,29 @@
+<%- include('includes/header') %>
+
+<div class="navbar-collapse collapse">
+  <ul class="nav navbar-nav">
+    <li class="dropdown">
+      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">Dropdown<span class="caret"></span></a>
+      <ul class="dropdown-menu">
+
+        <!-- this dropdown menu item looks right -->
+        <li><a href="#">Foo</a></li>
+
+        <!-- this dropdown menu item (a logout form) does not -->
+        <li><form action="/logout" method="post"><button type="submit" class="btn btn-link navbar-btn navbar-link">Log off</button></form></li>
+
+      </ul>
+    </li>
+  </ul>
+</div>
+
+    <div class="container">
+
+      <div class="starter-template">
+        <h1>WELCOME <%= users.name %></h1>
+        <p class="lead">Welcome to the members area</p>
+      </div>
+
+    </div><!-- /.container -->
+
+<%- include('includes/footer') %>
