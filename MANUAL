@@ -1,0 +1,31 @@
+What Is Express Validator?
+According to the official website, Express Validator is a set of Express.js middleware that wraps validator.js, a library that provides validator and sanitizer functions. Simply said, Express Validator is an Express middleware library that you can incorporate in your apps for server-side data validation.
+
+Why Server-Side Validation?
+Mainly speaking, you must care about server-side validation because data coming from other clients (single-page apps, regular web apps, mobile applications, etc.) cannot be trusted. For example, your servers have no means to know if a malicious user (or virus) disabled front-end validation (e.g., JavaScript) to allow the app to submit bogus data to your server. That is, client-side validation is not enough.
+
+// body parser
+body-parser extracts the entire body portion of an incoming request stream and exposes it on req.body.
+
+The middleware was a part of Express.js earlier but now you have to install it separately.
+
+This body-parser module parses the JSON, buffer, string and URL encoded data submitted using HTTP POST request. Install body-parser using NPM as shown below
+
+// passport
+Passport.js strategies
+Passport is a library of authentication functions that is adaptable to the needs of most applications. What makes Passport so flexible? The main reason is that developers can choose from a cornucopia of implementation strategies.
+
+Passport strategies are separate modules created to suit individual means of authentication. Available Passport strategies include:
+
+passport-local: local username and password authentication
+passport-facebook: authenticate with Facebook via OAuth
+passport-twitter: authenticate with Twitter via OAuth
+passport-jwt: use JSON web tokens instead of sessions
+There are hundreds of strategies. You can even find modules tailored to specific technologies and databases. For example, in this project, we will use local authentication with MongoDB. To concentrate on the authentication code, we’ll use the MongoDB wrapper Mongoose and the passport-local-mongoose module.
+
+Simply put, authentication is the process of verifying who someone is, whereas authorization is the process of verifying what specific applications, files, and data a user has access to. 
+
+// routers
+Express router is a class which helps us to create router handlers. By router handler i mean to not just providing routing to our app but also can extend this routing to handle validation, handle 404 or other errors etc.
+
+next() function will take your router to next routes.
