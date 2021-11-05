@@ -59,7 +59,11 @@ app.use(function (req, res, next) {
   res.locals.messages = require('express-messages')(req, res);
   next();
 });
-
+// global object
+app.get('*', function(req, res, next){
+  res.locals.user = req.user || null;
+  next();
+});
 // Define Routes
 app.use('/', routes);
 app.use('/users', users);
